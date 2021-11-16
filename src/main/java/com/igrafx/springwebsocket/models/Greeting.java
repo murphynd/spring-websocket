@@ -1,12 +1,12 @@
-package com.igrafx.springwebsocket;
+package com.igrafx.springwebsocket.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Message {
-    private  String name;
+@AllArgsConstructor
+public class Greeting {
+    private String message;
 }
