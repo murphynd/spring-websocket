@@ -115,7 +115,16 @@ function addObservers() {
     });
 
     $("#send").click(function() {
-        var auditEvent = JSON.stringify({'name': $("#name").val()});
+        var auditEvent = JSON.stringify(
+            {
+                'eventCategory': $("#eventCategory").val(),
+                'eventType':'walk',
+                'principal':'hello',
+                'hostname':'Natalie',
+                'platformVersion':'1.0',
+                'eventData':'yaaaas',
+                'timestamp': new Date()
+            });
         auditEvents.add(auditEvent);
     });
 
@@ -129,7 +138,7 @@ function deleteAuditEvent(id) {
 
 function addAuditEvent(auditEvent) {
     var button = "<button onclick=\"deleteAuditEvent('" + auditEvent.id + "');\" class=\"btn btn-danger btn-delete\" type=\"submit\">Delete</button>";
-    $("#auditEvent-rows").append("<tr id=\"" + auditEvent.id + "\"><td>" + auditEvent.id + "</td><td>" + auditEvent.name + "</td><td>" + button + "</td></tr>");
+    $("#auditEvent-rows").append("<tr id=\"" + auditEvent.id + "\"><td>" + auditEvent.id + "</td><td>" + auditEvent.eventCategory + "</td><td>" + button + "</td></tr>");
 }
 
 function setConnected(connected) {

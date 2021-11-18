@@ -9,5 +9,5 @@ import java.util.List;
 public interface AuditEventRepo extends MongoRepository<AuditEvent, String> {
 
   public AuditEvent findById(String id);
-  public List<AuditEvent> findByName(String name);
+  public List<AuditEvent> findByEventCategory(String eventCategory);
 }

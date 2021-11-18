@@ -8,7 +8,6 @@ import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,8 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import java.util.List;
 
 @RestController
@@ -64,7 +62,7 @@ public class AuditEventController  implements InitializingBean {
 
   /**
    * API Handler. Examples:
-   * 	curl -F "name=Natalie" -X POST "http://localhost/api/auditEvent/add"
+   * 	curl -F "eventcategory=loggin" -X POST "http://localhost/api/auditEvent/add"
    * 	curl -F "id={USER_ID}" -X POST "http://localhost/api/auditEvent/remove"
    * @param destination
    * @param auditEvent
