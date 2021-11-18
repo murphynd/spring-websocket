@@ -39,7 +39,7 @@ public class AuditEvent {
 
     @Override
     public String toString() {
-        return String.format("😀[id=%s, UUID='%s', EventCategory=%s']",getId(), getUuid(),getEventCategory());
+        return String.format("😀[id=%s, hostname='%s', EventCategory=%s']",getId(), getHostname(),getEventCategory());
     }
 
     public UUID getUuid() {
